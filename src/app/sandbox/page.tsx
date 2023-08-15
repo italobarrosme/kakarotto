@@ -33,7 +33,7 @@ export default function Sandbox() {
         {/* <EffectComposer multisampling={0}>
           <DepthOfField target={[0, 0, 60]} focalLength={1} bokehScale={14} />
         </EffectComposer> */}
-        {/* <CameraControls makeDefault /> */}
+        <CameraControls makeDefault />
       </Canvas>
     </main>
   )
