@@ -4,7 +4,6 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import { Edges, CameraControls, Environment } from '@react-three/drei'
 import { EffectComposer, DepthOfField } from '@react-three/postprocessing'
 import { Eye } from '../3ds/eye'
-import { Sun } from '../3ds/sun'
 
 export default function Sandbox() {
   const easing = (x: any) => Math.sqrt(1 - Math.pow(x - 1, 2))
@@ -22,16 +21,19 @@ export default function Sandbox() {
           intensity={3}
           color="orange"
         />
-        <Edges></Edges>
-        <Environment preset="warehouse" />
+        <Environment preset="dawn" />
         {Array.from({ length: 120 }, (_, i) => (
           <Eye
             key={i}
             index={i}
-            z={Math.round(easing(i / 80) * 80)}
+            z={Math.round(easing(i / 120) * 90)}
             speed={1}
           />
         ))}
+        {/* <EffectComposer multisampling={0}>
+          <DepthOfField target={[0, 0, 60]} focalLength={1} bokehScale={14} />
+        </EffectComposer> */}
+        {/* <CameraControls makeDefault /> */}
       </Canvas>
     </main>
   )
