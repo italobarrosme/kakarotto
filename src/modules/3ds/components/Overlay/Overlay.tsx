@@ -1,9 +1,15 @@
+import { cn } from '@/utils'
 import { ReactNode } from 'react'
 
 type OverlayProps = {
   children: ReactNode
+  className?: string
 }
 
-export const Overlay = ({ children }: OverlayProps) => {
-  return <div className="absolute z-10 h-full w-full">{children}</div>
+export const Overlay = ({ children, className }: OverlayProps) => {
+  return (
+    <div className={cn('absolute z-10 h-full w-full', className)}>
+      {children}
+    </div>
+  )
 }

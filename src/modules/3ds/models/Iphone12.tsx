@@ -1,12 +1,21 @@
 import { useGLTF } from '@react-three/drei'
+import { useCursor } from '@react-three/drei'
+import { useState } from 'react'
 
 export function Iphone12() {
   const { nodes, materials } = useGLTF('/iphone_12_mini.glb') as any
+  const [hovered, hover] = useState(false)
+  const [clicked, click] = useState(false)
+
+  useCursor(hovered)
   return (
     <group dispose={null}>
       <group
+        scale={clicked ? 1 * 1.4 : 2 * 1.2}
+        onClick={(event) => click(!clicked)}
+        onPointerOver={(event) => hover(true)}
+        onPointerOut={(event) => hover(false)}
         position={[0.051, 0.876, -0.29]}
-        rotation={[Math.PI / 2, 0, -0.526]}
       >
         <mesh
           castShadow
