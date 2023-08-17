@@ -59,7 +59,7 @@ export function FloatingPieces({
   })
 
   return (
-    <Detailed {...props} ref={ref} distances={[0, 65, 80]}>
+    <Detailed {...props} ref={ref} distances={[0, 65, 70]}>
       {model}
     </Detailed>
   )

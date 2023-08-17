@@ -14,7 +14,7 @@ export const GravityZero = () => {
         dpr={[1, 2.5]}
         camera={{ position: [0, 0, 10], fov: 20, near: 0.01, far: 80 + 15 }}
       >
-        <color attach="background" args={['#f9f9f9']} />
+        <color attach="background" args={['#F27141']} />
         <spotLight
           position={[1, 10, 1]}
           penumbra={1}
@@ -22,17 +22,17 @@ export const GravityZero = () => {
           color="orange"
         />
         <Environment preset="city" />
-        {Array.from({ length: 40 }, (_, i) => (
+        {Array.from({ length: 50 }, (_, i) => (
           <FloatingPieces
             key={i}
             index={i}
             z={Math.round(easing(i / 90) * 70)}
-            speed={1}
+            speed={1.5}
             model={<Iphone12 />}
           />
         ))}
         <EffectComposer multisampling={0}>
-          <DepthOfField target={[0, 0, 60]} focalLength={1} bokehScale={5} />
+          <DepthOfField target={[0, 0, 60]} focalLength={0.9} bokehScale={5} />
         </EffectComposer>
         {/* <CameraControls makeDefault /> */}
       </Canvas>

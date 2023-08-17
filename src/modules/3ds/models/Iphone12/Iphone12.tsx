@@ -11,10 +11,10 @@ export function Iphone12() {
   return (
     <group dispose={null}>
       <group
-        scale={clicked ? 1 * 1.4 : 2 * 1.2}
-        onClick={(event) => click(!clicked)}
-        onPointerOver={(event) => hover(true)}
-        onPointerOut={(event) => hover(false)}
+        scale={clicked ? 2 * 1.4 : 1 * 1.2}
+        onClick={() => click(!clicked)}
+        onPointerOver={() => hover(true)}
+        onPointerOut={() => hover(false)}
         position={[0.051, 0.876, -0.29]}
       >
         <mesh
@@ -22,12 +22,14 @@ export function Iphone12() {
           receiveShadow
           geometry={nodes.Plane.geometry}
           material={materials.metal}
+          material-color={hovered ? '#F27141' : '#000000'}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.Plane_1.geometry}
           material={materials.black}
+          material-color={hovered ? '#F27141' : '#000000'}
         />
         <mesh
           castShadow
@@ -40,6 +42,7 @@ export function Iphone12() {
           receiveShadow
           geometry={nodes.Plane_3.geometry}
           material={materials.blue}
+          material-color={hovered ? '#F27141' : '#000000'}
         />
         <mesh
           castShadow
@@ -53,6 +56,7 @@ export function Iphone12() {
             receiveShadow
             geometry={nodes.Plane001.geometry}
             material={materials['cam blue']}
+            material-color={hovered ? '#F27141' : '#000000'}
           />
           <mesh
             castShadow

@@ -1,1 +1,1 @@
-export { GravityZero } from './GravityZero'
+export { GravityZero } from './template/GravityZero'
