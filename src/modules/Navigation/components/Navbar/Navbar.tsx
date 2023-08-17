@@ -20,9 +20,9 @@ type NavbarProps = {
 
 export const Navbar = ({ logo, menus, isMenuOpen, children }: NavbarProps) => {
   return (
-    <nav className="relative flex h-20 items-center justify-between px-4 shadow-sm">
+    <nav className="relative flex h-20 items-center justify-between bg-brand-dark px-4 shadow-sm">
       <Link href="/">
-        <Image src={logo} alt="logo" width={42} height={42} />
+        <Image src={logo} alt="logo" width={180} height={180} />
       </Link>
       {children}
       {isMenuOpen ? (

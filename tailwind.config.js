@@ -16,12 +16,12 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          dark: '#0D0D0D',
+          dark: '#030826',
           light: '#fffef3',
-          primary: '#004b8f',
-          secondary: '#1068b9',
-          soft: '#2D3035',
-          accent: '#c92524',
+          primary: '#F27141',
+          secondary: '#F28B30',
+          soft: '#F28D77',
+          accent: '#F24C27',
         },
         transparent: 'transparent',
       },
