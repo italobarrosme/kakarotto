@@ -29,7 +29,7 @@ export function FloatingPieces({
     // Randomly distributing the objects along the vertical
     y: THREE.MathUtils.randFloatSpread(height * 2),
     // This gives us a random value between -1 and 1, we will multiply it with the viewport width
-    x: THREE.MathUtils.randFloatSpread(15),
+    x: THREE.MathUtils.randFloatSpread(13),
     // How fast objects spin, randFlost gives us a value between min and max, in this case 8 and 12
     spin: THREE.MathUtils.randFloat(8, 12),
     // Some random rotations, Math.PI represents 360 degrees in radian
@@ -61,7 +61,7 @@ export function FloatingPieces({
   })
 
   return (
-    <Detailed {...props} ref={ref} distances={[0, 65, 70]}>
+    <Detailed {...props} ref={ref} distances={[0, 10, 40]}>
       {model}
     </Detailed>
   )
