@@ -29,7 +29,7 @@ export function FloatingPieces({
     // Randomly distributing the objects along the vertical
     y: THREE.MathUtils.randFloatSpread(height * 2),
     // This gives us a random value between -1 and 1, we will multiply it with the viewport width
-    x: THREE.MathUtils.randFloatSpread(13),
+    x: THREE.MathUtils.randFloatSpread(3),
     // How fast objects spin, randFlost gives us a value between min and max, in this case 8 and 12
     spin: THREE.MathUtils.randFloat(8, 12),
     // Some random rotations, Math.PI represents 360 degrees in radian
@@ -43,7 +43,7 @@ export function FloatingPieces({
     // We cap dt at 0.1 because now it can't accumulate while the user changes the tab, it will simply stop
     if (dt < 0.1) {
       ref.current.position.set(
-        index === 0 ? 0 : data.x + 0.31 * width,
+        index === 0 ? 0 : data.x * width,
         (data.y += dt * speed),
         -z
       )

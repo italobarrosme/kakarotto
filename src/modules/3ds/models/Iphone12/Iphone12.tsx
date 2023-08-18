@@ -22,14 +22,12 @@ export function Iphone12() {
           receiveShadow
           geometry={nodes.Plane.geometry}
           material={materials.metal}
-          material-color={hovered ? '#F27141' : '#000000'}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.Plane_1.geometry}
           material={materials.black}
-          material-color={hovered ? '#F27141' : '#000000'}
         />
         <mesh
           castShadow
@@ -42,7 +40,6 @@ export function Iphone12() {
           receiveShadow
           geometry={nodes.Plane_3.geometry}
           material={materials.blue}
-          material-color={hovered ? '#F27141' : '#000000'}
         />
         <mesh
           castShadow
@@ -56,7 +53,6 @@ export function Iphone12() {
             receiveShadow
             geometry={nodes.Plane001.geometry}
             material={materials['cam blue']}
-            material-color={hovered ? '#F27141' : '#000000'}
           />
           <mesh
             castShadow

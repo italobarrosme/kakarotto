@@ -33,7 +33,7 @@ export const GravityZero = () => {
             color="orange"
           />
           <Environment preset="sunset" />
-          {Array.from({ length: 30 }, (_, i) => (
+          {Array.from({ length: 35 }, (_, i) => (
             <FloatingPieces
               key={i}
               index={i}
@@ -48,7 +48,6 @@ export const GravityZero = () => {
           {/* <CameraControls makeDefault /> */}
         </PerformanceMonitor>
       </Canvas>
-      {dpr}
     </Suspense>
   )
 }
