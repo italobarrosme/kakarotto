@@ -1,13 +1,7 @@
 import { Canvas } from '@react-three/fiber'
-import {
-  Edges,
-  CameraControls,
-  Environment,
-  PerformanceMonitor,
-} from '@react-three/drei'
-import { EffectComposer, DepthOfField } from '@react-three/postprocessing'
+import { Environment, PerformanceMonitor } from '@react-three/drei'
 import { FloatingPieces } from '@/modules/3ds/animations/FloatingPieces'
-import { Sun, Iphone12 } from '@/modules/3ds/models/'
+import { Sun } from '@/modules/3ds/models/'
 import { Suspense, useState } from 'react'
 
 export const GravityZero = () => {
@@ -25,7 +19,7 @@ export const GravityZero = () => {
           onIncline={() => setDpr(3)}
           onDecline={() => setDpr(1)}
         >
-          <color attach="background" args={['#F27141']} />
+          <color attach="background" args={['#030826']} />
           <spotLight
             position={[1, 10, 1]}
             penumbra={1}
@@ -39,13 +33,19 @@ export const GravityZero = () => {
               index={i}
               z={Math.round(easing(i / 90) * 70)}
               speed={1.5}
-              model={<Iphone12 />}
+              model={
+                <mesh
+                  visible
+                  userData={{ hello: 'world' }}
+                  position={[1, 2, 3]}
+                  rotation={[Math.PI / 2, 0, 0]}
+                >
+                  <sphereGeometry args={[1, 16, 32]} />
+                  <meshStandardMaterial color="#F27141" />
+                </mesh>
+              }
             />
           ))}
-          {/* <EffectComposer multisampling={0}>
-          <DepthOfField target={[0, 0, 60]} focalLength={0.9} bokehScale={10} />
-        </EffectComposer> */}
-          {/* <CameraControls makeDefault /> */}
         </PerformanceMonitor>
       </Canvas>
     </Suspense>

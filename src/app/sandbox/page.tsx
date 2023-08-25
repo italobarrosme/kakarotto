@@ -1,6 +1,5 @@
 'use client'
 
-import { Overlay } from '@/modules/3ds/components'
 import { GravityZero } from '@/modules/3ds/scenes'
 
 export default function Sandbox() {
