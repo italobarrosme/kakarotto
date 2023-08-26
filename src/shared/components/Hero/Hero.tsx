@@ -1,4 +1,4 @@
-type HeroProps = {
+export type HeroProps = {
   children: React.ReactNode
 }
 

@@ -1,7 +1,6 @@
 import { Canvas } from '@react-three/fiber'
 import { Environment, PerformanceMonitor } from '@react-three/drei'
 import { FloatingPieces } from '@/modules/3ds/animations/FloatingPieces'
-import { Sun } from '@/modules/3ds/models/'
 import { Suspense, useState } from 'react'
 
 export const GravityZero = () => {
