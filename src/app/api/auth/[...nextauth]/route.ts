@@ -16,6 +16,9 @@ const authOptions: AuthOptions = {
 
       return session
     },
+    async redirect({ baseUrl, url }: any) {
+      return `${baseUrl}/dashboard`
+    },
   },
 }
 

@@ -26,7 +26,7 @@ export const Navbar = ({ logo, menus, isMenuOpen, children }: NavbarProps) => {
       </Link>
       {children}
       {isMenuOpen ? (
-        <ul className="absolute right-20  top-16 z-40 rounded-md border bg-brand-light p-2 shadow-xl">
+        <ul className="absolute right-7 top-16 z-40 w-24 rounded-md border bg-brand-light p-2 shadow-xl">
           {menus.map((menu, index) => (
             <li
               key={index}

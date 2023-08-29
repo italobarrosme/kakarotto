@@ -29,7 +29,7 @@ export const MenuAuth = ({
     >
       {data?.user ? (
         <>
-          <Icon icon={icon} width={32} />
+          <Icon icon={icon} width={32} className="text-brand-light" />
           <Image
             src={data.user?.image || ''}
             alt="image user"

@@ -12,7 +12,7 @@ type Props = {
 }
 
 export const metadata: Metadata = {
-  description: 'Next.js Boilerplate',
+  description: 'Orangescreen site',
   manifest: '/manifest.json',
   icons: {
     apple: '/apple-icon.png',
