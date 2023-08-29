@@ -1,1 +1,1 @@
-export { GravityZero } from './template/GravityZero'
+export { ApresentationItem, GravityZero } from './template/'
