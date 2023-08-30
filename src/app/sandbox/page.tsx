@@ -1,23 +1,23 @@
 'use client'
 
 import { Overlay } from '@/modules/3ds/components'
-import { useSunStore } from '@/modules/3ds/models/Sun/store/SunStore'
+import { NikeShoes } from '@/modules/3ds/models/NikeShoes'
+import { useNikeShoesStore } from '@/modules/3ds/models/NikeShoes/store'
 import { ApresentationItem } from '@/modules/3ds/scenes'
 import { Button } from '@/shared/pieces/Button'
 
 export default function Sandbox() {
-  const { setColor } = useSunStore()
+  const { setColor } = useNikeShoesStore()
   const changeColor = (color: string) => {
-    // ramdom color primary colors
-
-    setColor(color)
+    setColor('body', color)
+    setColor('flap', color)
   }
 
   return (
     <main>
-      <div className="flex h-screen flex-row items-center justify-center">
-        <ApresentationItem />
-        <Overlay>
+      <div className="flex h-screen w-screen flex-row items-center justify-center">
+        <ApresentationItem model={<NikeShoes />}></ApresentationItem>
+        <Overlay className="left-0 w-1/6">
           <div className="absolute left-6 top-5 flex">
             <>
               <Button
