@@ -1,22 +1,21 @@
 'use client'
 
 import { Overlay } from '@/modules/3ds/components'
-import { NikeShoes } from '@/modules/3ds/models/NikeShoes'
-import { useNikeShoesStore } from '@/modules/3ds/models/NikeShoes/store'
+import { Iphone12 } from '@/modules/3ds/models'
+import { useStoreIphone12 } from '@/modules/3ds/models/Iphone12/store'
 import { ApresentationItem } from '@/modules/3ds/scenes'
 import { Button } from '@/shared/pieces/Button'
 
 export default function Sandbox() {
-  const { setColor } = useNikeShoesStore()
+  const { setColor } = useStoreIphone12()
   const changeColor = (color: string) => {
-    setColor('body', color)
-    setColor('flap', color)
+    setColor(color)
   }
 
   return (
     <main>
       <div className="flex h-screen w-screen flex-row items-center justify-center">
-        <ApresentationItem model={<NikeShoes />}></ApresentationItem>
+        <ApresentationItem model={<Iphone12 />}></ApresentationItem>
         <Overlay className="left-0 w-1/6">
           <div className="absolute left-6 top-5 flex">
             <>
@@ -33,9 +32,9 @@ export default function Sandbox() {
                 }}
               />
               <Button
-                className="mr-2 h-10 w-10 rounded-full border-2 bg-[#F2F2F2] hover:bg-[#F2F2F2a6]"
+                className="mr-2 h-10 w-10 rounded-full border-2 bg-[#0CABA8] hover:bg-[#0CABA8]"
                 onClick={() => {
-                  changeColor('#F2F2F2')
+                  changeColor('#0CABA8')
                 }}
               />
             </>

@@ -1,27 +1,26 @@
 import { useGLTF } from '@react-three/drei'
 import { useCursor } from '@react-three/drei'
+import { useStoreIphone12 } from '@/modules/3ds/models/Iphone12/store'
 import { useState } from 'react'
 
 export function Iphone12() {
   const { nodes, materials } = useGLTF('/iphone_12_mini.glb') as any
+  const { data } = useStoreIphone12()
   const [hovered, hover] = useState(false)
-  const [clicked, click] = useState(false)
 
   useCursor(hovered)
   return (
-    <group dispose={null}>
+    <group dispose={null} rotation={[0, 1, 1]} scale={1}>
       <group
-        scale={clicked ? 2 * 1.4 : 1 * 1.2}
-        onClick={() => click(!clicked)}
         onPointerOver={() => hover(true)}
         onPointerOut={() => hover(false)}
-        position={[0.051, 0.876, -0.29]}
       >
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.Plane.geometry}
           material={materials.metal}
+          material-color={data.color}
         />
         <mesh
           castShadow
@@ -40,6 +39,7 @@ export function Iphone12() {
           receiveShadow
           geometry={nodes.Plane_3.geometry}
           material={materials.blue}
+          material-color={data.color}
         />
         <mesh
           castShadow
@@ -91,6 +91,7 @@ export function Iphone12() {
             receiveShadow
             geometry={nodes.Circle001_4.geometry}
             material={materials.black}
+            material-color={data.color}
           />
           <mesh
             castShadow

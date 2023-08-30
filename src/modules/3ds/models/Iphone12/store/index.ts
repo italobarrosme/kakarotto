@@ -7,9 +7,9 @@ type StoreIphone12 = {
   setColor: (color: string) => void
 }
 
-export const storeIphone12 = create<StoreIphone12>((set) => ({
+export const useStoreIphone12 = create<StoreIphone12>((set) => ({
   data: {
-    color: 'black',
+    color: '#191919',
   },
   setColor: (color: string) =>
     set((state) => ({
