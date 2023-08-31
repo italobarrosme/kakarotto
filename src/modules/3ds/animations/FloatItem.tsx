@@ -27,7 +27,7 @@ export function FloatItem({ props, model }: FloatItemProps) {
     <Detailed
       {...props}
       ref={ref}
-      distances={[0, 10, 40]}
+      distances={[0, 0, 0]}
       position={[0, 0, 0]}
       scale={0.8}
     >
