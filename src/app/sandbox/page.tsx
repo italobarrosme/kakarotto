@@ -14,11 +14,24 @@ export default function Sandbox() {
 
   return (
     <main>
-      <div className="flex h-screen w-screen flex-row items-center justify-center">
-        <ApresentationItem model={<Iphone12 />}></ApresentationItem>
-        <Overlay className="left-0 w-1/6">
-          <div className="absolute left-6 top-5 flex">
-            <>
+      <div className="h-screen w-screen items-center justify-center">
+        <Overlay className="left-0 flex h-1/4 flex-col gap-4 p-8">
+          <>
+            <h1 className="text-2xl font-bold">iPhone 12</h1>
+            <div className="flex flex-col gap-4">
+              <p className="text-xs sm:w-1/2 sm:text-base">
+                Desenvolvido pela renomada Apple, o iPhone 12 é a combinação
+                perfeita entre inovação e sofisticação. Com um design
+                deslumbrante e recursos avançados, este smartphone redefine a
+                experiência móvel. Permita-me apresentar a você as razões pelas
+                quais o iPhone 12 é a escolha definitiva para quem busca o
+                melhor em tecnologia:
+              </p>
+              <h2>
+                <span className="text-2xl font-bold">R$ 4.999,00</span>
+              </h2>
+            </div>
+            <div className="flex">
               <Button
                 className="mr-2 h-10 w-10 rounded-full border-2 bg-[#030826] hover:bg-[#030826a6]"
                 onClick={() => {
@@ -37,9 +50,10 @@ export default function Sandbox() {
                   changeColor('#0CABA8')
                 }}
               />
-            </>
-          </div>
+            </div>
+          </>
         </Overlay>
+        <ApresentationItem model={<Iphone12 />}></ApresentationItem>
       </div>
     </main>
   )

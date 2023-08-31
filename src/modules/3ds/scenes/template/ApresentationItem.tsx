@@ -13,7 +13,7 @@ export const ApresentationItem = ({ model, props }: ApresentationItemPorps) => {
     <Canvas
       shadows
       gl={{ antialias: false }}
-      camera={{ position: [0, 0, 7], fov: 45 }}
+      camera={{ position: [0, 0, 5], fov: 45 }}
       performance={{ min: 0.5 }}
     >
       <spotLight
@@ -23,7 +23,7 @@ export const ApresentationItem = ({ model, props }: ApresentationItemPorps) => {
         position={[0, 15, 3]}
         castShadow
       />
-      <ambientLight intensity={0.4} />
+      <ambientLight intensity={0.7} />
 
       <FloatItem model={model} props={props} />
       <Environment preset="city" />
@@ -35,7 +35,12 @@ export const ApresentationItem = ({ model, props }: ApresentationItemPorps) => {
         far={0.8}
       />
 
-      <OrbitControls enableZoom={false} enablePan={false} />
+      <OrbitControls
+        minPolarAngle={Math.PI / 2}
+        maxPolarAngle={Math.PI / 2}
+        enableZoom={false}
+        enablePan={false}
+      />
     </Canvas>
   )
 }
