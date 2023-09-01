@@ -10,8 +10,10 @@ export default function Home() {
       <Hero>
         <Overlay>
           <div className="flex h-full flex-col items-center justify-center">
-            <h1 className="text-6xl font-bold text-white">OrangeScreen</h1>
-            <p className="text-2xl text-white">
+            <h1 className="text-5xl font-bold text-white sm:text-6xl">
+              OrangeScreen
+            </h1>
+            <p className="text-base text-white sm:text-2xl">
               Transformando Ideias em Soluções Web
             </p>
           </div>
