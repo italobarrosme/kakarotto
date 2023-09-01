@@ -1,8 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'SandBox 3d',
-  description: 'SandBox 3d',
+  title: 'Product',
   manifest: '/manifest.json',
   icons: {
     apple: '/apple-icon.png',
@@ -10,7 +9,7 @@ export const metadata: Metadata = {
   themeColor: '#000',
 }
 
-export default function SandboxLayout({
+export default function ProductLayout({
   children,
 }: {
   children: React.ReactNode

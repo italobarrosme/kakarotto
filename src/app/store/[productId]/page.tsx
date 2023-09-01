@@ -6,18 +6,25 @@ import { useStoreIphone12 } from '@/modules/3ds/models/Iphone12/store'
 import { ApresentationItem } from '@/modules/3ds/scenes'
 import { Button } from '@/shared/pieces/Button'
 
-export default function Sandbox() {
+type ProductParams = {
+  params: {
+    productId: string
+  }
+}
+
+const Product = ({ params }: ProductParams) => {
   const { setColor } = useStoreIphone12()
   const changeColor = (color: string) => {
     setColor(color)
   }
 
   return (
-    <main>
+    <section>
       <div className="h-screen w-screen items-center justify-center">
-        <Overlay className="left-0 flex h-1/4 flex-col gap-4 p-8">
+        <Overlay className="left-0 flex h-1/4 flex-col gap-2 p-8">
           <>
-            <h1 className="text-2xl font-bold">iPhone 12</h1>
+            <h1 className="break-words text-2xl font-bold">iPhone 12</h1>
+            <small className="text-[10px]">{params.productId}</small>
             <div className="flex flex-col gap-4">
               <p className="text-xs sm:w-1/2 sm:text-base">
                 Desenvolvido pela renomada Apple, o iPhone 12 é a combinação
@@ -55,6 +62,8 @@ export default function Sandbox() {
         </Overlay>
         <ApresentationItem model={<Iphone12 />}></ApresentationItem>
       </div>
-    </main>
+    </section>
   )
 }
+
+export default Product
