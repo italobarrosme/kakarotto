@@ -25,6 +25,9 @@ module.exports = {
         },
         transparent: 'transparent',
       },
+      backgroundImage: {
+        'effect-granula': "url('/effectgranula.png')",
+      },
     },
   },
 }
