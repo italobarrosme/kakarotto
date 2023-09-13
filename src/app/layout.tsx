@@ -12,6 +12,7 @@ type Props = {
 }
 
 export const metadata: Metadata = {
+  title: 'Orangescreen',
   description: 'Orangescreen site',
   manifest: '/manifest.json',
   icons: {

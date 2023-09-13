@@ -28,6 +28,9 @@ module.exports = {
       backgroundImage: {
         'effect-granula': "url('/effectgranula.png')",
       },
+      minHeight: {
+        'screen-nav': 'calc(100vh - 5rem)',
+      },
     },
   },
 }
