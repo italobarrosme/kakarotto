@@ -28,7 +28,9 @@ export default function RootLayout({ children }: Props) {
         <NextAuthProvider>
           <ToastProvider>
             <Navigation />
-            {children}
+            <main className="min-h-screen bg-effect-granula px-8">
+              {children}
+            </main>
           </ToastProvider>
         </NextAuthProvider>
       </body>

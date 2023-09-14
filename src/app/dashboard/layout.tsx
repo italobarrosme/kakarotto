@@ -18,9 +18,5 @@ export const metadata: Metadata = {
 }
 
 export default function DashboardLayout({ children }: Props) {
-  return (
-    <main className="min-h-screen bg-effect-granula px-8 pt-24">
-      {children}
-    </main>
-  )
+  return <main className="min-h-screen px-8 pt-24">{children}</main>
 }
