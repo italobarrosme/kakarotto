@@ -25,6 +25,7 @@ export const Input = ({ label, className, icon, ...props }: InputProps) => {
             name={props.id}
             onChange={props.onChange}
             value={props.value}
+            aria-label={props.name}
             className={cn(
               'w-full h-8 outline-none bg-brand-dark border-brand-light border-2 rounded-md px-2 py-1 placeholder:text-brand-light invalid:border-red-500',
               className

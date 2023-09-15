@@ -1,1 +1,0 @@
-export { NikeShoes } from './NikeShoes'

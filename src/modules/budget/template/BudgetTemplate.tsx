@@ -29,6 +29,7 @@ export const BudgetTemplate = () => {
         type="email"
         placeholder="ex: contato@gmail.com"
         className="font-bold"
+        name="email"
         onChange={(evt) => {
           setEmailData(evt.target.value)
         }}

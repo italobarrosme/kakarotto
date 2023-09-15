@@ -27,7 +27,7 @@ export const GravityZero = () => {
             color="orange"
           />
           <Environment preset="sunset" />
-          {Array.from({ length: 35 }, (_, i) => (
+          {Array.from({ length: 100 }, (_, i) => (
             <FloatingPieces
               key={i}
               index={i}

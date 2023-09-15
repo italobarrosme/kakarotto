@@ -25,7 +25,7 @@ export const Navbar = ({ logo, menus, isMenuOpen, children }: NavbarProps) => {
         <Image src={logo} alt="logo" width={180} height={180} />
       </Link>
       {children}
-      {isMenuOpen ? (
+      {isMenuOpen && (
         <ul className="absolute right-7 top-16 z-40 w-24 rounded-md border bg-brand-light p-2 shadow-xl">
           {menus.map((menu, index) => (
             <li
@@ -37,7 +37,7 @@ export const Navbar = ({ logo, menus, isMenuOpen, children }: NavbarProps) => {
             </li>
           ))}
         </ul>
-      ) : null}
+      )}
     </nav>
   )
 }
