@@ -2,6 +2,7 @@ import { Canvas } from '@react-three/fiber'
 import { Environment, PerformanceMonitor } from '@react-three/drei'
 import { FloatingPieces } from '@/modules/3ds/animations/FloatingPieces'
 import { Suspense, useState } from 'react'
+import { Sphere } from '../../models'
 
 export const GravityZero = () => {
   const easing = (x: any) => Math.sqrt(1 - Math.pow(x - 1, 2))
@@ -39,8 +40,7 @@ export const GravityZero = () => {
                   position={[1, 2, 3]}
                   rotation={[Math.PI / 2, 0, 0]}
                 >
-                  <sphereGeometry args={[1, 16, 32]} />
-                  <meshStandardMaterial color="#F27141" />
+                  <Sphere />
                 </mesh>
               }
             />

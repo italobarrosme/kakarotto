@@ -13,14 +13,16 @@ export const Button = ({
   className,
   type,
   icon = '',
+  disabled,
   onClick,
 }: ButtonProps) => {
   return (
     <button
       onClick={onClick}
       type={type}
+      disabled={disabled}
       className={cn(
-        'flex items-center gap-4 whitespace-nowrap rounded bg-brand-primary px-4 py-2 font-bold text-white hover:bg-brand-secondary',
+        'flex items-center gap-4 whitespace-nowrap rounded bg-brand-primary px-4 py-2 font-bold text-white hover:bg-brand-secondary disabled:bg-brand-light disabled:text-brand-dark',
         className
       )}
     >
