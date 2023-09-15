@@ -15,5 +15,5 @@ export default function SandboxLayout({
 }: {
   children: React.ReactNode
 }) {
-  return <>{children}</>
+  return <section className="min-h-screen px-8 pt-24">{children}</section>
 }

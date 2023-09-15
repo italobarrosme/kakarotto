@@ -19,9 +19,9 @@ const Product = ({ params }: ProductParams) => {
   }
 
   return (
-    <section>
+    <section className="min-h-screen px-8 pt-24">
       <div className="h-screen w-screen items-center justify-center">
-        <Overlay className="left-0 flex h-1/4 flex-col gap-2 p-8">
+        <Overlay className="left-0 flex h-1/4 flex-col gap-2 px-8">
           <>
             <h1 className="break-words text-2xl font-bold">iPhone 12</h1>
             <small className="text-[10px]">{params.productId}</small>
