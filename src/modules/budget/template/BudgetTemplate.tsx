@@ -2,24 +2,35 @@ import { useStoreSphere } from '@/modules/3ds/models/Sphere/store'
 import { Button } from '@/shared/pieces/Button'
 import { Input } from '@/shared/pieces/Input'
 import { useState, MouseEvent } from 'react'
+import { ValidateEmail } from '../functions'
+import { serviceBudget } from '../service'
+import { delay } from '@/utils'
 
 export const BudgetTemplate = () => {
   const [emailData, setEmailData] = useState<string>('')
   const { setColorCurrent } = useStoreSphere()
 
-  const onSubmit = (evt: MouseEvent) => {
+  const { createBudget } = serviceBudget()
+
+  const onSubmit = async (evt: MouseEvent) => {
     evt.preventDefault()
-    setColorCurrent('#00FF00')
 
-    setTimeout(() => {
-      setColorCurrent('#F27141')
+    try {
+      createBudget({
+        payload: {
+          email: emailData,
+        },
+      })
+      setColorCurrent('#00FF9C')
+    } catch (error) {
+      setColorCurrent('#BF2188')
+    } finally {
       setEmailData('')
-    }, 1900)
-  }
 
-  const validateEmail = (email: string) => {
-    const re = /\S+@\S+\.\S+/
-    return re.test(email)
+      delay(2000).then(() => {
+        setColorCurrent('#F27141')
+      })
+    }
   }
 
   return (
@@ -30,6 +41,7 @@ export const BudgetTemplate = () => {
         placeholder="ex: contato@gmail.com"
         className="font-bold"
         name="email"
+        required
         onChange={(evt) => {
           setEmailData(evt.target.value)
         }}
@@ -38,7 +50,7 @@ export const BudgetTemplate = () => {
       <Button
         type="button"
         label="Enviar"
-        disabled={!validateEmail(emailData)}
+        disabled={!ValidateEmail(emailData)}
         className="h-8"
         onClick={(event) => onSubmit(event)}
       ></Button>

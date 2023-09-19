@@ -24,10 +24,11 @@ export const Input = ({ label, className, icon, ...props }: InputProps) => {
             type={props.type}
             name={props.id}
             onChange={props.onChange}
+            placeholder={props.placeholder}
             value={props.value}
             aria-label={props.name}
             className={cn(
-              'w-full h-8 outline-none bg-brand-dark border-brand-light border-2 rounded-md px-2 py-1 placeholder:text-brand-light invalid:border-red-500',
+              'w-full h-8 outline-none bg-brand-dark border-brand-light border-2 rounded-md px-2 py-1 placeholder:text-brand-grey invalid:border-red-500',
               className
             )}
           />
