@@ -7,20 +7,22 @@ vi.mock('@iconify/react', () => ({
   Icon: () => <svg data-testid="icon" />,
 }))
 
-const renderComponent = ({ label, className, icon, onClick }: ButtonProps) => {
+const renderComponent = ({ children, className, icon }: ButtonProps) => {
   render(
-    <Button label={label} className={className} icon={icon} onClick={onClick} />
+    <Button className={className} icon={icon}>
+      {children}
+    </Button>
   )
 }
 
 describe('Button', () => {
-  afterEach(() => {
+  beforeEach(() => {
     vi.restoreAllMocks()
   })
 
   it('should render component', () => {
     renderComponent({
-      label: 'test',
+      children: 'test',
     })
 
     const labelButton = screen.getByRole('button', {
@@ -34,23 +36,24 @@ describe('Button', () => {
     const onClickStub = vi.fn()
 
     renderComponent({
-      label: 'test',
-      onClick: onClickStub,
+      children: 'test',
+      onClick: onClickStub(), // Atribua onClickStub diretamente aqui
     })
 
     const button = screen.getByRole('button', {
       name: 'test',
     })
 
-    // Simulate a click on the button
+    // Simule um clique no botão
     await userEvent.click(button)
 
-    expect(onClickStub).toBeCalled()
+    // Verifique se onClickStub foi chamado
+    expect(onClickStub).toHaveBeenCalled()
   })
 
   it('should render an icon', () => {
     renderComponent({
-      label: 'test',
+      children: 'test',
       icon: 'test',
     })
 
@@ -61,7 +64,7 @@ describe('Button', () => {
 
   it('should render a custom class', () => {
     renderComponent({
-      label: 'test',
+      children: 'test',
       className: 'bg-red-500',
     })
 

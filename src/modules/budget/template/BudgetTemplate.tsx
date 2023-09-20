@@ -1,7 +1,7 @@
 import { useStoreSphere } from '@/modules/3ds/models/Sphere/store'
 import { Button } from '@/shared/pieces/Button'
 import { Input } from '@/shared/pieces/Input'
-import { useState, MouseEvent } from 'react'
+import { useState, FormEvent } from 'react'
 import { ValidateEmail } from '../functions'
 import { serviceBudget } from '../service'
 import { delay } from '@/utils'
@@ -9,10 +9,9 @@ import { delay } from '@/utils'
 export const BudgetTemplate = () => {
   const [emailData, setEmailData] = useState<string>('')
   const { setColorCurrent } = useStoreSphere()
-
   const { createBudget } = serviceBudget()
 
-  const onSubmit = async (evt: MouseEvent) => {
+  const onSubmit = async (evt: FormEvent) => {
     evt.preventDefault()
 
     try {
@@ -25,16 +24,21 @@ export const BudgetTemplate = () => {
     } catch (error) {
       setColorCurrent('#BF2188')
     } finally {
-      setEmailData('')
-
       delay(2000).then(() => {
+        setEmailData('')
         setColorCurrent('#F27141')
       })
     }
   }
 
   return (
-    <form className="mt-10 flex items-end gap-2">
+    <form
+      className="mt-10 flex items-end gap-2"
+      onSubmit={(event) => {
+        event.preventDefault()
+        onSubmit(event)
+      }}
+    >
       <Input
         label="Deixe seu email de contato para orçamentos"
         type="email"
@@ -48,12 +52,12 @@ export const BudgetTemplate = () => {
         value={emailData}
       />
       <Button
-        type="button"
-        label="Enviar"
+        type="submit"
         disabled={!ValidateEmail(emailData)}
         className="h-8"
-        onClick={(event) => onSubmit(event)}
-      ></Button>
+      >
+        Enviar
+      </Button>
     </form>
   )
 }
