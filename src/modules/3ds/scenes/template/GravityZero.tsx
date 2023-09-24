@@ -1,3 +1,5 @@
+'use client'
+
 import { Canvas } from '@react-three/fiber'
 import { Environment, PerformanceMonitor } from '@react-three/drei'
 import { FloatingPieces } from '@/modules/3ds/animations/FloatingPieces'
@@ -9,7 +11,7 @@ export const GravityZero = () => {
   const [dpr, setDpr] = useState(1.5)
 
   return (
-    <Suspense fallback={<span></span>}>
+    <Suspense fallback={''}>
       <Canvas
         gl={{ antialias: false }}
         dpr={dpr}
@@ -20,23 +22,18 @@ export const GravityZero = () => {
           onDecline={() => setDpr(1)}
         >
           <color attach="background" args={['#030826']} />
-          <spotLight
-            position={[1, 10, 1]}
-            penumbra={1}
-            intensity={3}
-            color="orange"
-          />
-          <Environment preset="sunset" />
+
+          <Environment files="./4iaA-adams_place_bridge_1k.hdr" />
           {Array.from({ length: 100 }, (_, i) => (
             <FloatingPieces
               key={i}
               index={i}
-              z={Math.round(easing(i / 90) * 70)}
-              speed={1.5}
+              z={Math.round(easing(i / 120) * 70)}
+              speed={1.3}
               model={
                 <mesh
                   visible
-                  userData={{ hello: 'world' }}
+                  userData={{ hello: 'gravityzero' }}
                   position={[1, 2, 3]}
                   rotation={[Math.PI / 2, 0, 0]}
                 >
@@ -45,6 +42,16 @@ export const GravityZero = () => {
               }
             />
           ))}
+          <spotLight
+            intensity={0}
+            angle={90}
+            penumbra={1}
+            position={[10, 30, 10]}
+            castShadow
+            shadow-mapSize={[512, 512]}
+            color={'#ffffff'}
+          />
+          <ambientLight intensity={0.6} />
         </PerformanceMonitor>
       </Canvas>
     </Suspense>

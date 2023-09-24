@@ -8,7 +8,7 @@ export type requestCreateBudget = {
   }
 }
 
-export const serviceBudget = () => {
+export const ServiceBudget = () => {
   const createBudget = (payload: requestCreateBudget): responseCreateBudget => {
     try {
       fetch('api/budget', {

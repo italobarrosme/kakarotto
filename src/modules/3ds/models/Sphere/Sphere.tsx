@@ -6,8 +6,8 @@ export function Sphere() {
 
   return (
     <mesh>
-      <sphereGeometry args={[0.4, 16, 32]} />
-      <meshStandardMaterial color={data.colorCurrent} />
+      <sphereGeometry args={[0.4, 16, 32]} attach={'geometry'} />
+      <meshStandardMaterial color={data.colorCurrent} attach={'material'} />
     </mesh>
   )
 }

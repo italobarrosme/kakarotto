@@ -1,3 +1,5 @@
+'use client'
+
 import { ContactShadows, Environment, OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { ReactNode, Suspense } from 'react'

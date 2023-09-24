@@ -5,13 +5,9 @@ const withPWA = require('next-pwa')({
   skipWaiting: true,
 })
 
-const withTM = require('next-transpile-modules')(['three'])
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   ...withPWA,
-  ...withTM,
-  transpilePackages: ['three'],
   reactStrictMode: true,
   publicRuntimeConfig: {
     API_URL: process.env.API_URL,

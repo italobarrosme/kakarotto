@@ -1,15 +1,17 @@
+'use client'
+
 import { useStoreSphere } from '@/modules/3ds/models/Sphere/store'
 import { Button } from '@/shared/pieces/Button'
 import { Input } from '@/shared/pieces/Input'
 import { useState, FormEvent } from 'react'
 import { ValidateEmail } from '../functions'
-import { serviceBudget } from '../service'
+import { ServiceBudget } from '../service'
 import { delay } from '@/utils'
 
 export const BudgetTemplate = () => {
   const [emailData, setEmailData] = useState<string>('')
   const { setColorCurrent } = useStoreSphere()
-  const { createBudget } = serviceBudget()
+  const { createBudget } = ServiceBudget()
 
   const onSubmit = async (evt: FormEvent) => {
     evt.preventDefault()
