@@ -8,7 +8,7 @@ import { ValidateEmail } from '../functions'
 import { ServiceBudget } from '../service'
 import { delay } from '@/utils'
 
-export const BudgetTemplate = () => {
+export const BudgetCompanyTemplate = () => {
   const [emailData, setEmailData] = useState<string>('')
   const { setColorCurrent } = useStoreSphere()
   const { createBudget } = ServiceBudget()
