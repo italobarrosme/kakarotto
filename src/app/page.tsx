@@ -1,6 +1,6 @@
 import { Overlay } from '@/modules/3ds/components'
 import { GravityZero } from '@/modules/3ds/scenes/template'
-import { BudgetTemplate } from '@/modules/Budget/template/BudgetTemplate'
+import { BudgetTemplate } from '@/modules/Budget/template'
 import { Hero } from '@/shared/components/Hero'
 
 export default function Home() {
