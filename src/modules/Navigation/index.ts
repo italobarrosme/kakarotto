@@ -1,1 +1,1 @@
-export { Navigation } from './template/Navigation'
+export { NavigationTemplate } from './template/NavigationTemplate'

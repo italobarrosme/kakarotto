@@ -16,17 +16,17 @@ a {
 }
 
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 8px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  @apply bg-brand-dark;
+  @apply bg-brand-grey;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  @apply bg-brand-primary border-brand-dark;
+  @apply bg-brand-light border-brand-dark;
   border-radius: 4px;
 }
 

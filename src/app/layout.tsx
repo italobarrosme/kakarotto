@@ -5,7 +5,8 @@ import { ReactNode } from 'react'
 import { NextAuthProvider } from '@/providers/auth'
 import { Metadata } from 'next'
 import { ToastProvider } from '@/providers/toast'
-import { Navigation } from '@/modules/Navigation'
+import { NavigationTemplate } from '@/modules/Navigation'
+import { FooterTemplate } from '@/modules/Footer'
 
 type Props = {
   children?: ReactNode
@@ -27,10 +28,11 @@ export default function RootLayout({ children }: Props) {
       <body>
         <NextAuthProvider>
           <ToastProvider>
-            <Navigation />
+            <NavigationTemplate />
             <main className="min-h-screen">{children}</main>
           </ToastProvider>
         </NextAuthProvider>
+        <FooterTemplate />
       </body>
     </html>
   )

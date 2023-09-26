@@ -4,7 +4,7 @@
 import { Navbar } from '../components/Navbar'
 import { useMenuNav } from '../hooks'
 
-export const Navigation = () => {
+export const NavigationTemplate = () => {
   const {
     isMenuOpen,
     menus,
