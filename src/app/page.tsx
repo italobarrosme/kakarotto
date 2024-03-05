@@ -1,20 +1,21 @@
 import { Overlay } from '@/modules/3ds/components'
 import { GravityZero } from '@/modules/3ds/scenes/template'
-import { BudgetCompanyTemplate } from '@/modules/BudgetCompany/template'
+import { BudgetEmailForm } from '@/modules/BudgetCompany/forms/BudgetEmailForm'
+
 import { Hero } from '@/shared/components/Hero'
 
 export default function Home() {
   return (
     <Hero>
       <Overlay>
-        <section className="flex h-full flex-col items-center justify-center">
-          <h1 className="text-5xl font-bold text-white sm:text-6xl">
-            orangeScreen
+        <section className="flex h-full flex-col justify-center gap-4 lg:items-center">
+          <h1 className="text-7xl font-bold text-brand-primary lg:text-6xl">
+            Coqueiro Digital
           </h1>
-          <p className="text-base text-white sm:text-2xl">
+          <p className="text-xl text-brand-light lg:text-2xl">
             Transformando Ideias em Soluções Web
           </p>
-          <BudgetCompanyTemplate />
+          <BudgetEmailForm />
         </section>
       </Overlay>
       <GravityZero />

@@ -3,10 +3,10 @@ module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx,,scss}'],
   theme: {
     screens: {
-      sm: '480px',
-      md: '768px',
-      lg: '976px',
-      xl: '1440px',
+      sm: '380px',
+      md: '1024px',
+      lg: '1440px',
+      xl: '1920px',
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
@@ -18,8 +18,8 @@ module.exports = {
         brand: {
           dark: '#030826',
           light: '#fffef3',
-          primary: '#F27141',
-          secondary: '#F28B30',
+          primary: '#fda000',
+          secondary: '#f24c27',
           soft: '#F28D77',
           accent: '#F24C27',
           grey: '#c1c1c1ab',

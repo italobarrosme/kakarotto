@@ -7,7 +7,7 @@ export type HeroProps = {
 export const Hero = ({ children }: HeroProps) => {
   return (
     <>
-      <section className="h-screen w-screen">{children}</section>
+      <section className="h-[calc(100vh_-_60px)] w-screen">{children}</section>
     </>
   )
 }

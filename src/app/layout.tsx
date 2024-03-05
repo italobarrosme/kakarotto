@@ -3,7 +3,7 @@ import '@/styles/main.scss'
 
 import { ReactNode } from 'react'
 import { NextAuthProvider } from '@/providers/auth'
-import { Metadata } from 'next'
+import { Metadata, Viewport } from 'next'
 import { ToastProvider } from '@/providers/toast'
 import { NavigationTemplate } from '@/modules/Navigation'
 import { FooterTemplate } from '@/modules/Footer'
@@ -16,23 +16,23 @@ export const metadata: Metadata = {
   title: 'Orangescreen',
   description: 'Orangescreen site',
   manifest: '/manifest.json',
-  icons: {
-    apple: '/apple-icon.png',
-  },
-  themeColor: '#000',
+}
+
+export const viewport: Viewport = {
+  themeColor: 'black',
 }
 
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
-      <body>
+      <body className=" bg-brand-dark text-sm text-brand-light md:text-base">
         <NextAuthProvider>
           <ToastProvider>
             <NavigationTemplate />
-            <main className="min-h-screen">{children}</main>
+            <main>{children}</main>
+            <FooterTemplate />
           </ToastProvider>
         </NextAuthProvider>
-        <FooterTemplate />
       </body>
     </html>
   )

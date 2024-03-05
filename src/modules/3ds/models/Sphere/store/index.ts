@@ -9,7 +9,7 @@ type StoreSphere = {
 
 export const useStoreSphere = create<StoreSphere>((set) => ({
   data: {
-    colorCurrent: '#F27141',
+    colorCurrent: '#fda000',
   },
   setColorCurrent: (colorCurrent: string) =>
     set((state) => ({

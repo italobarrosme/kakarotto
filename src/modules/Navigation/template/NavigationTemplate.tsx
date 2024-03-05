@@ -13,7 +13,11 @@ export const NavigationTemplate = () => {
     // data
   } = useMenuNav()
   return (
-    <Navbar logo="/logo-line-black.png" menus={menus} isMenuOpen={isMenuOpen}>
+    <Navbar
+      logo="/logo_coqueirodigital_brand_horizontal.png"
+      menus={menus}
+      isMenuOpen={isMenuOpen}
+    >
       {/* <MenuAuth
         icon={isMenuOpen ? 'lucide:x' : 'quill:hamburger'}
         onClick={data?.user ? toggleMenu : () => signIn()}
