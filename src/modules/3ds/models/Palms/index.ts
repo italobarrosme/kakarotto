@@ -1,0 +1,1 @@
+export { PalmsModel } from './Palms'

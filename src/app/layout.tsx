@@ -13,8 +13,8 @@ type Props = {
 }
 
 export const metadata: Metadata = {
-  title: 'Orangescreen',
-  description: 'Orangescreen site',
+  title: 'Coqueiro Digital',
+  description: 'Coqueiro digital site',
   manifest: '/manifest.json',
 }
 
@@ -29,7 +29,7 @@ export default function RootLayout({ children }: Props) {
         <NextAuthProvider>
           <ToastProvider>
             <NavigationTemplate />
-            <main>{children}</main>
+            <main className="min-h-[calc(100vh_-_60px)]">{children}</main>
             <FooterTemplate />
           </ToastProvider>
         </NextAuthProvider>

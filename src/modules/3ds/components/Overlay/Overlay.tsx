@@ -12,7 +12,7 @@ export const Overlay = ({ children, className }: OverlayProps) => {
   return (
     <div
       className={cn(
-        'absolute z-10 h-full w-full p-4 bg-effect-granula',
+        'absolute z-10 h-full w-full bg-effect-granula p-4',
         className
       )}
     >

@@ -5,6 +5,7 @@ import { Environment, PerformanceMonitor } from '@react-three/drei'
 import { FloatingPieces } from '@/modules/3ds/animations/FloatingPieces'
 import { Suspense, useState } from 'react'
 import { Sphere } from '../../models'
+import { PalmsModel } from '../../models/Palms'
 
 export const GravityZero = () => {
   const easing = (x: any) => Math.sqrt(1 - Math.pow(x - 1, 2))
@@ -21,10 +22,10 @@ export const GravityZero = () => {
           onIncline={() => setDpr(3)}
           onDecline={() => setDpr(1)}
         >
-          <color attach="background" args={['#030826']} />
+          <color attach="background" args={['#121E1E']} />
 
           <Environment files="./4iaA-adams_place_bridge_1k.hdr" />
-          {Array.from({ length: 100 }, (_, i) => (
+          {Array.from({ length: 110 }, (_, i) => (
             <FloatingPieces
               key={i}
               index={i}
@@ -37,7 +38,8 @@ export const GravityZero = () => {
                   position={[1, 2, 3]}
                   rotation={[Math.PI / 2, 0, 0]}
                 >
-                  <Sphere />
+                  {/* <Sphere /> */}
+                  <PalmsModel />
                 </mesh>
               }
             />

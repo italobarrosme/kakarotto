@@ -1,6 +1,6 @@
 import { Overlay } from '@/modules/3ds/components'
 import { GravityZero } from '@/modules/3ds/scenes/template'
-import { BudgetEmailForm } from '@/modules/BudgetCompany/forms/BudgetEmailForm'
+import { BudgetEmailForm } from '@/modules/BudgetCompany/forms'
 
 import { Hero } from '@/shared/components/Hero'
 
@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <Hero>
       <Overlay>
-        <section className="flex h-full flex-col justify-center gap-4 lg:items-center">
+        <section className="flex h-full flex-col items-center justify-center gap-4">
           <h1 className="text-7xl font-bold text-brand-primary lg:text-6xl">
             Coqueiro Digital
           </h1>

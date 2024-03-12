@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form'
 import { BudgetEmailSchema } from './schema/BudgetEmailSchema'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { cn } from '@/utils'
+import { useRouter } from 'next/navigation'
 
 export const BudgetEmailForm = () => {
   const {
@@ -22,6 +23,8 @@ export const BudgetEmailForm = () => {
     resolver: zodResolver(BudgetEmailSchema),
   })
 
+  const { push } = useRouter()
+
   const sendToService = (data: BudgetEmailSchema) => {
     console.log(data, 'HEREEEEEEEEEEEEEEEE')
 
@@ -33,6 +36,8 @@ export const BudgetEmailForm = () => {
     <form
       onSubmit={handleSubmit((data) => {
         sendToService(data)
+
+        // push('/budget-questions')
       })}
       className="flex items-center justify-center gap-4 p-4"
     >

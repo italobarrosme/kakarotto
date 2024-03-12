@@ -16,10 +16,10 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          dark: '#030826',
+          dark: '#121E1E',
           light: '#fffef3',
           primary: '#fda000',
-          secondary: '#f24c27',
+          secondary: '#ffb433',
           soft: '#F28D77',
           accent: '#F24C27',
           grey: '#c1c1c1ab',
