@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <Hero>
       <Overlay>
-        <section className="flex h-full flex-col items-center justify-center gap-4">
+        <section className="flex h-full flex-col items-center justify-center gap-4 overflow-hidden p-4">
           <h1 className="text-7xl font-bold text-brand-primary lg:text-6xl">
             Coqueiro Digital
           </h1>

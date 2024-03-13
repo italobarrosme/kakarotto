@@ -25,7 +25,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
             <input
               ref={ref} // Adiciona a referência para o input
               className={cn(
-                'w-full h-8 outline-none bg-brand-dark border-brand-light border-2 rounded-md px-2 py-1 placeholder:text-brand-grey',
+                'h-8 w-full rounded-md border-2 border-brand-light bg-brand-dark px-2 py-1 outline-none placeholder:text-brand-grey',
                 className
               )}
               {...rest}

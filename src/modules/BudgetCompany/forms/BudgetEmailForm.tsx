@@ -39,7 +39,7 @@ export const BudgetEmailForm = () => {
 
         // push('/budget-questions')
       })}
-      className="flex items-center justify-center gap-4 p-4"
+      className="flex flex-wrap items-center gap-4 md:max-w-md md:flex-nowrap md:justify-center lg:max-w-lg"
     >
       <Input
         label="Insira seu email para orçamento"
@@ -49,7 +49,7 @@ export const BudgetEmailForm = () => {
         error={errors.email?.message}
         className={cn(isValid ? 'border-green-500' : 'border-red-500 ')}
       />
-      <Button type="submit" className="mt-7" disabled={!isValid}>
+      <Button type="submit" className="md:mt-7" disabled={!isValid}>
         Enviar
       </Button>
     </form>
