@@ -4,6 +4,7 @@ import { getFindFile } from '@/modules/Blob/actions'
 import { BudgetEmailForm } from '@/modules/BudgetCompany/forms'
 
 import { Hero } from '@/shared/components/Hero'
+import { Suspense } from 'react'
 
 export default async function Home() {
   const palm = await getFindFile('palms1.glb')
@@ -22,9 +23,9 @@ export default async function Home() {
           <BudgetEmailForm />
         </section>
       </Overlay>
-      {palm && environment ? (
-        <GravityZero environment={environment} model={palm} />
-      ) : null}
+      <Suspense fallback={null}>
+        <GravityZero model={palm} environment={environment} />
+      </Suspense>
     </Hero>
   )
 }

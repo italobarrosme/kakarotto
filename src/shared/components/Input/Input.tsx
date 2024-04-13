@@ -21,7 +21,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
             {label}
           </label>
           <div className="flex gap-2">
-            {!!icon && <Icon icon={icon} className="h-5 w-5" />}
+            {!!icon && <Icon icon={icon} className="size-5" />}
             <input
               ref={ref} // Adiciona a referência para o input
               className={cn(

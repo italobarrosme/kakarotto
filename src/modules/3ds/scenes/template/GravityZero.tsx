@@ -11,7 +11,7 @@ type GravityZeroProps = {
   model: string
 }
 
-export const GravityZero = async ({ environment, model }: GravityZeroProps) => {
+export const GravityZero = ({ environment, model }: GravityZeroProps) => {
   const easing = (x: any) => Math.sqrt(1 - Math.pow(x - 1, 2))
   const [dpr, setDpr] = useState(1.5)
 
