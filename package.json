@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint src --ext=ts",
     "lint:fix": "npm run lint -- --fix",
-    "prepare": "husky install",
+    "prepare": "husky",
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
     "test:deploy": "vitest --run"
