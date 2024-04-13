@@ -1,0 +1,1 @@
+export { maskFormatCurrencyToBRL } from './maskFormatCurrencyToBRL'

@@ -26,8 +26,6 @@ export const BudgetEmailForm = () => {
   const { push } = useRouter()
 
   const sendToService = (data: BudgetEmailSchema) => {
-    console.log(data, 'HEREEEEEEEEEEEEEEEE')
-
     clearErrors()
     reset()
   }

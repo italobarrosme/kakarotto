@@ -4,10 +4,14 @@ import { Canvas } from '@react-three/fiber'
 import { Environment, PerformanceMonitor } from '@react-three/drei'
 import { FloatingPieces } from '@/modules/3ds/animations/FloatingPieces'
 import { Suspense, useState } from 'react'
-import { Sphere } from '../../models'
 import { PalmsModel } from '../../models/Palms'
 
-export const GravityZero = () => {
+type GravityZeroProps = {
+  environment: string
+  model: string
+}
+
+export const GravityZero = async ({ environment, model }: GravityZeroProps) => {
   const easing = (x: any) => Math.sqrt(1 - Math.pow(x - 1, 2))
   const [dpr, setDpr] = useState(1.5)
 
@@ -24,7 +28,7 @@ export const GravityZero = () => {
         >
           <color attach="background" args={['#121E1E']} />
 
-          <Environment files="./4iaA-adams_place_bridge_1k.hdr" />
+          <Environment files={environment} />
           {Array.from({ length: 110 }, (_, i) => (
             <FloatingPieces
               key={i}
@@ -39,7 +43,7 @@ export const GravityZero = () => {
                   rotation={[Math.PI / 2, 0, 0]}
                 >
                   {/* <Sphere /> */}
-                  <PalmsModel />
+                  <PalmsModel glbPath={model} />
                 </mesh>
               }
             />

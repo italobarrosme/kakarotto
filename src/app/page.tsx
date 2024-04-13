@@ -1,10 +1,14 @@
 import { Overlay } from '@/modules/3ds/components'
 import { GravityZero } from '@/modules/3ds/scenes/template'
+import { getFindFile } from '@/modules/Blob/actions'
 import { BudgetEmailForm } from '@/modules/BudgetCompany/forms'
 
 import { Hero } from '@/shared/components/Hero'
 
-export default function Home() {
+export default async function Home() {
+  const palm = await getFindFile('palms1.glb')
+  const environment = await getFindFile('4iaA-adams_place_bridge_1k.hdr')
+
   return (
     <Hero>
       <Overlay>
@@ -18,7 +22,9 @@ export default function Home() {
           <BudgetEmailForm />
         </section>
       </Overlay>
-      <GravityZero />
+      {palm && environment ? (
+        <GravityZero environment={environment} model={palm} />
+      ) : null}
     </Hero>
   )
 }

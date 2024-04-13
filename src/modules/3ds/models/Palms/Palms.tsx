@@ -1,8 +1,15 @@
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function PalmsModel(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF('/palms1.glb') as any
+export type PalmsModelProps = {
+  glbPath: string
+}
+
+export function PalmsModel(
+  { glbPath }: PalmsModelProps,
+  props: JSX.IntrinsicElements['group']
+) {
+  const { nodes, materials } = useGLTF(glbPath) as any
   return (
     <group {...props} dispose={null}>
       <group
