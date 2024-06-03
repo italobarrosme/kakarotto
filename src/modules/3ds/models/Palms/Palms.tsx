@@ -12,38 +12,28 @@ export function PalmsModel(
   const { nodes, materials } = useGLTF(glbPath) as any
   return (
     <group {...props} dispose={null}>
-      <group
-        position={[9.267, 12.896, 18.141]}
-        rotation={[-1.012, 0.072, 2.557]}
-        scale={[0.223, 0.853, 0.234]}
-      >
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Cube059.geometry}
-          material={materials['Material.033']}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Cube059_1.geometry}
-          material={materials['Material.038']}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Cube059_2.geometry}
-          material={materials['Material.034']}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Cube059_3.geometry}
-          material={materials['Material.039']}
-        />
+      <group rotation={[-Math.PI / 2, 0, 0]}>
+        <group
+          position={[0.00232, -0.0434, -0.33425]}
+          rotation={[0, Math.PI / 2, 0]}
+          scale={[0.025, 0.01, 1.5]}
+        >
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.FRUNZA_1_0.geometry}
+            material={materials.Root}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.FRUNZA_1_0_1.geometry}
+            material={materials.Root}
+          />
+        </group>
       </group>
     </group>
   )
 }
 
-useGLTF.preload('/palms1.glb')
+useGLTF.preload('/palm_leaf.glb')

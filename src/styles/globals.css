@@ -1,0 +1,25 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import '@coqueirodigital/react-components/dist/styles.css';
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-neutral-100;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply border-neutral-800 bg-neutral-400;
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply cursor-pointer;
+}

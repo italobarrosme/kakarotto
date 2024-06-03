@@ -33,7 +33,7 @@ export const GravityZero = ({ environment, model }: GravityZeroProps) => {
             <FloatingPieces
               key={i}
               index={i}
-              z={Math.round(easing(i / 120) * 70)}
+              z={Math.round(easing(i / 80) * 70)}
               speed={1.3}
               model={
                 <mesh
