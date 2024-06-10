@@ -15,14 +15,31 @@ module.exports = {
     },
     extend: {
       colors: {
-        brand: {
-          dark: '#121E1E',
-          light: '#fffef3',
-          primary: '#fda000',
-          secondary: '#ffb433',
-          soft: '#F28D77',
-          accent: '#F24C27',
-          grey: '#c1c1c1ab',
+        primary: {
+          regular: 'var(--color-primary-regular)',
+          light: 'var(--color-primary-light)',
+          dark: 'var(--color-primary-dark)',
+        },
+        secondary: {
+          regular: 'var(--color-secondary-regular)',
+          light: 'var(--color-secondary-light)',
+          dark: 'var(--color-secondary-dark)',
+        },
+        neutral: {
+          black: 'var(--color-neutral-black)',
+          white: 'var(--color-neutral-white)',
+          light: 'var(--color-neutral-light)',
+          lightest: 'var(--color-neutral-lightest)',
+          dark: 'var(--color-neutral-dark)',
+        },
+        feedback: {
+          error: 'var(--color-feedback-error)',
+          warning: 'var(--color-feedback-warning)',
+          success: 'var(--color-feedback-success)',
+          info: 'var(--color-feedback-info)',
+        },
+        complementary: {
+          highlight: 'var(--color-complementary-highlight)',
         },
         transparent: 'transparent',
       },

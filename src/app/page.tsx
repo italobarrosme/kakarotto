@@ -2,12 +2,9 @@ import { Overlay } from '@/modules/3ds/components'
 import { GravityZero } from '@/modules/3ds/scenes/template'
 import { getFindFile } from '@/modules/Blob/actions'
 import { BudgetEmailForm } from '@/modules/BudgetCompany/forms'
-
 import { Hero } from '@/shared/components/Hero'
-
-import { Suspense } from 'react'
-
 import { Text } from '@coqueirodigital/react-components'
+import { Suspense } from 'react'
 
 export default async function Home() {
   const palm = await getFindFile('palm_leaf.glb')
@@ -17,10 +14,6 @@ export default async function Home() {
     <Hero>
       <Overlay>
         <section className="flex h-full flex-col items-center justify-center gap-4 overflow-hidden p-4">
-          <Text tag="h1" variant="2xl/bold" className="text-brand-primary">
-            Coqueiro Digital
-          </Text>
-
           <BudgetEmailForm />
         </section>
       </Overlay>
