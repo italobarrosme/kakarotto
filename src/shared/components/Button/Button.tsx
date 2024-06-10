@@ -17,7 +17,7 @@ export const Button = ({
   return (
     <button
       className={cn(
-        `flex items-center gap-4 whitespace-nowrap rounded bg-brand-primary px-4 py-2 font-bold text-white hover:bg-brand-secondary disabled:bg-brand-light disabled:text-brand-dark`,
+        `bg-brand-primary disabled:bg-brand-light disabled:text-brand-dark flex items-center gap-4 whitespace-nowrap rounded px-4 py-2 font-bold text-white hover:bg-secondary-regular`,
         className
       )}
       {...rest}

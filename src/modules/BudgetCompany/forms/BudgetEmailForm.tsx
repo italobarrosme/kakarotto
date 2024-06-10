@@ -3,7 +3,7 @@
 import { useForm } from 'react-hook-form'
 import { BudgetEmailSchema } from './schema/BudgetEmailSchema'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useRouter } from 'next/navigation'
+// import { useRouter } from 'next/navigation'
 import { InputText, Button, Text } from '@coqueirodigital/react-components'
 
 import { motion } from 'framer-motion'
@@ -23,9 +23,10 @@ export const BudgetEmailForm = () => {
     resolver: zodResolver(BudgetEmailSchema),
   })
 
-  const { push } = useRouter()
+  // const { push } = useRouter()
 
   const sendToService = (data: BudgetEmailSchema) => {
+    console.log(data, 'send data')
     clearErrors()
     reset()
   }

@@ -20,7 +20,7 @@ export const ButtonIcon = ({
       <button
         type="button"
         id="buttonIcon"
-        className="flex items-center gap-2 rounded-full bg-brand-primary p-2 font-bold text-white hover:bg-brand-secondary"
+        className="flex items-center gap-2 rounded-full bg-primary-regular p-2 font-bold text-white hover:bg-secondary-regular"
         onClick={onClick}
       >
         {label ? (

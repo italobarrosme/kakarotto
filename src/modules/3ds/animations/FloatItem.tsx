@@ -1,6 +1,6 @@
 import { Detailed } from '@react-three/drei'
-import { ReactNode, useRef, useState } from 'react'
-import { useFrame, useThree } from '@react-three/fiber'
+import { ReactNode, useRef } from 'react'
+import { useFrame } from '@react-three/fiber'
 import { Group } from 'three'
 
 type FloatItemProps = {

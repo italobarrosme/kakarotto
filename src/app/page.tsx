@@ -3,7 +3,6 @@ import { GravityZero } from '@/modules/3ds/scenes/template'
 import { getFindFile } from '@/modules/Blob/actions'
 import { BudgetEmailForm } from '@/modules/BudgetCompany/forms'
 import { Hero } from '@/shared/components/Hero'
-import { Text } from '@coqueirodigital/react-components'
 import { Suspense } from 'react'
 
 export default async function Home() {

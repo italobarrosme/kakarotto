@@ -12,7 +12,7 @@ const InputArea = forwardRef<HTMLTextAreaElement, TextareaProps>(
     return (
       <>
         <div className="relative flex w-80 flex-col gap-2 lg:min-w-full">
-          <label className="relative text-xs font-semibold text-brand-light">
+          <label className="relative text-xs font-semibold text-neutral-white">
             {label}
           </label>
           <div className="flex gap-2">

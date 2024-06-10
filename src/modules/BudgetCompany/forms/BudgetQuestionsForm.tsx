@@ -1,6 +1,6 @@
 'use client'
 
-import { Button } from '@/shared/components/Button'
+// import { Button } from '@/shared/components/Button'
 import { Input } from '@/shared/components/Input'
 import { useForm } from 'react-hook-form'
 import { BudgetQuestionsSchema } from './schema/BudgetQuestionsSchema'
@@ -17,7 +17,7 @@ export const BudgetQuestionsForm = () => {
     reset,
     getValues,
     setValue,
-    formState: { errors, isValid },
+    formState: { errors },
   } = useForm<BudgetQuestionsSchema>({
     mode: 'onChange',
     defaultValues: {
@@ -53,7 +53,7 @@ export const BudgetQuestionsForm = () => {
       className="flex h-full max-w-lg flex-wrap items-center justify-center gap-4 p-4"
     >
       <fieldset className="flex flex-col gap-4">
-        <legend className="mb-4 text-lg font-semibold text-brand-secondary">
+        <legend className="mb-4 text-lg font-semibold text-primary-regular">
           Informações contratuais
         </legend>
         <Input
@@ -87,7 +87,7 @@ export const BudgetQuestionsForm = () => {
         />
       </fieldset>
       <fieldset className="flex flex-col gap-4">
-        <legend className="mb-4 text-lg font-semibold text-brand-secondary">
+        <legend className="mb-4 text-lg font-semibold text-primary-regular">
           Informações tecnicas
         </legend>
         <InputArea

@@ -18,7 +18,7 @@ type NavbarProps = {
   children?: ReactNode
 }
 
-export const Navbar = ({ logo, menus, children }: NavbarProps) => {
+export const Navbar = ({ logo, children }: NavbarProps) => {
   return (
     <nav className="fixed top-0 z-40 flex h-20 w-full items-center justify-between bg-transparent px-4 shadow-sm backdrop-blur-sm">
       <Link href="/">
