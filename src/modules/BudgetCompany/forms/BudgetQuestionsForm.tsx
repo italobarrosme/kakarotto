@@ -1,7 +1,7 @@
 'use client'
 
 // import { Button } from '@/shared/components/Button'
-import { Input } from '@/shared/components/Input'
+import { InputText } from '@coqueirodigital/react-components'
 import { useForm } from 'react-hook-form'
 import { BudgetQuestionsSchema } from './schema/BudgetQuestionsSchema'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -56,13 +56,13 @@ export const BudgetQuestionsForm = () => {
         <legend className="mb-4 text-lg font-semibold text-primary-regular">
           Informações contratuais
         </legend>
-        <Input
+        <InputText
           label="Seu nome completo"
           type="text"
           {...register('fullName')}
           error={errors.fullName?.message}
         />
-        <Input
+        <InputText
           label="Quanto você tem disponível para investir?"
           type="text"
           defaultValue={formatCurrencyToBRL(+getValues('availableBudget'))}
@@ -73,13 +73,13 @@ export const BudgetQuestionsForm = () => {
           }}
           error={errors.availableBudget?.message}
         />
-        <Input
+        <InputText
           label="Nome do projeto"
           type="text"
           {...register('projectName')}
           error={errors.projectName?.message}
         />
-        <Input
+        <InputText
           label="Prazo para entrega"
           type="date"
           {...register('deadline')}
